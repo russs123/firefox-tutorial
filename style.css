@@ -1,0 +1,209 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /*border: 1px solid red;*/
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f9f9fb;
+  padding: 30px;
+  font-family: Segoe UI, sans-serif;
+}
+
+.logo-and-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 80%;
+  margin: 40px 0;
+}
+
+.firefox-logo {
+  width: 80px;
+  height: auto;
+}
+
+.brand {
+  font-size: 46px;
+}
+
+.search-wrapper {
+  background-color: rgba(249, 249, 249, 0.95);
+  width: 100%;
+  height: 100px;
+  padding: 25px 0;
+  margin-bottom: 50px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+form {
+  width: 720px;
+  position: relative;
+  margin: auto;
+}
+
+.ddg-logo {
+  width: 25px;
+  position: absolute;
+  top: 11px;
+  left: 15px;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 15px;
+  padding-left: 50px;
+  height: 50px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(58, 57, 68, 0.2);
+  border: none;
+  font-size: 15px;
+}
+
+.search-bar::placeholder {
+  color: #000;
+  opacity: 0.5;
+}
+
+.search-bar:focus {
+  outline: 1px solid #0060DF;
+}
+
+.section-wrapper {
+  width: 966px;
+  padding: 10px;
+}
+
+.pocket-heading {
+  display: inline;
+  font-size: 17px;
+  margin-right: 10px;
+}
+
+.link {
+  text-decoration: none;
+  color: #0060DF;
+  font-size: 13px;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.card-wrapper {
+  margin: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 350px);
+  grid-gap: 24px;
+}
+
+.card {
+  max-width: 300px;
+  background-color: #FFF;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(58, 57, 68, 0.2);
+  position: relative;
+}
+
+span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.card-image {
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+}
+
+.card-description {
+  padding: 15px;
+}
+
+.card-site {
+  font-size: 16px;
+  color: #777;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+.card-link {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.card-link:hover {
+  color: #0060DF;
+}
+
+.card-text {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 10px;
+  font-size: 14px;
+}
+
+@media (max-width: 1100px) {
+  form {
+    width: 600px;
+  }
+
+  .section-wrapper {
+    width: 726px;
+  }
+
+  footer ul,
+  footer .link {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 900px) {
+  form {
+    width: 360px;
+  }
+
+  .section-wrapper {
+    width: 490px;
+  }
+
+  .card-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  form {
+    width: 200px;
+  }
+
+  .section-wrapper {
+    width: 246px;
+  }
+
+  .card-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
